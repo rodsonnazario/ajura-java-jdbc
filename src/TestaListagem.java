@@ -1,5 +1,4 @@
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -19,7 +18,7 @@ public class TestaListagem {
 			Integer id = rs.getInt("id");
 			String nome = rs.getString("nome");
 			String descricao = rs.getString("descricao");
-			System.out.println(String.format("id %s, nome %s, descricao %s", id, nome, descricao));
+			System.out.println(String.format("id: %s, nome: %s, descricao: %s", id, nome, descricao));
 		}		
 		
 		con.close();

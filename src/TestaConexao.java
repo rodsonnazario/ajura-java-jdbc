@@ -1,5 +1,4 @@
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class TestaConexao {
@@ -10,5 +9,4 @@ public class TestaConexao {
 		System.out.println("Fechando conexão");
 		connection.close();
 	}
-
 }
