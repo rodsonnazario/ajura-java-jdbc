@@ -6,10 +6,7 @@ public class TestaConexao {
 
 	public static void main(String[] args) throws SQLException {
 
-		Connection connection = DriverManager.getConnection(
-				"jdbc:mariadb://localhost/loja_virtual?useTimezone=true&serverTimezone=UTC", 
-				"root", 
-				"root");
+		Connection connection = ConnectionFactory.recuperarConexao();
 		System.out.println("Fechando conexão");
 		connection.close();
 	}
