@@ -14,8 +14,8 @@ public class TestaInsercao {
 		Connection con = connectionFactory.recuperarConexao();
 		
 		Statement stm = con.createStatement();
-		stm.execute("INSERT INTO produto (nome, descricao) "
-				+ "VALUES ('MOUSE', 'MOUSE SEM FIO')"
+		stm.execute("INSERT INTO produto (nome, descricao, categoria_id) "
+				+ "VALUES ('MOUSE', 'MOUSE SEM FIO', 3)"
 				,Statement.RETURN_GENERATED_KEYS);
 		
 		ResultSet rs = stm.getGeneratedKeys();
