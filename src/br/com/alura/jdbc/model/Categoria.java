@@ -11,8 +11,16 @@ public class Categoria {
 		this.nome = nome;
 	}
 	
+	public Integer getId() {
+		return id;
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+	
 	@Override
 	public String toString() {
-		return String.format("A Categoria é: %d, %s", this.id, this.nome);
+		return String.format("Categoria: %d, %s", this.id, this.nome);
 	}
 }
