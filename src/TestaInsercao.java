@@ -20,6 +20,8 @@ public class TestaInsercao {
 			System.out.println("O id criado foi: "+ id);
 		}
 		
+		rs.close();
+		stm.close();		
 		con.close();
 	}
 }

@@ -19,8 +19,10 @@ public class TestaListagem {
 			String nome = rs.getString("nome");
 			String descricao = rs.getString("descricao");
 			System.out.println(String.format("id: %s, nome: %s, descricao: %s", id, nome, descricao));
-		}		
+		}	
 		
+		rs.close();
+		stm.close();
 		con.close();
 	}
 }
