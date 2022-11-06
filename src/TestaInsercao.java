@@ -7,7 +7,8 @@ public class TestaInsercao {
 
 	public static void main(String[] args) throws SQLException {
 		
-		Connection con = ConnectionFactory.recuperarConexao();
+		ConnectionFactory connectionFactory = new ConnectionFactory();
+		Connection con = connectionFactory.recuperarConexao();
 		
 		Statement stm = con.createStatement();
 		stm.execute("INSERT INTO produto (nome, descricao) "

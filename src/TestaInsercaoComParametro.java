@@ -7,8 +7,8 @@ import java.sql.Statement;
 public class TestaInsercaoComParametro {
 
 	public static void main(String[] args) throws SQLException {
-
-		try (Connection con = ConnectionFactory.recuperarConexao()) {
+		ConnectionFactory connectionFactory = new ConnectionFactory();
+		try (Connection con = connectionFactory.recuperarConexao()) {
 			con.setAutoCommit(false);
 
 			try (PreparedStatement stm = con.prepareStatement("INSERT INTO produto (nome, descricao) VALUES (?, ?)",
