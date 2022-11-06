@@ -43,15 +43,15 @@ public class ProdutoDAO {
 		try (PreparedStatement pstm = connection.prepareStatement(sql)) {
 			pstm.execute();
 
-			ResultSet rs = pstm.getResultSet();
-
-			while (rs.next()) {
-				Integer id = rs.getInt("id");
-				String nome = rs.getString("nome");
-				String descricao = rs.getString("descricao");
-				Produto produto = new Produto(nome, descricao);
-				produto.setId(id);
-				produtos.add(produto);
+			try(ResultSet rs = pstm.getResultSet()) {
+				
+				while (rs.next()) {
+					Integer id = rs.getInt("id");
+					String nome = rs.getString("nome");
+					String descricao = rs.getString("descricao");
+					Produto produto = new Produto(id, nome, descricao);					
+					produtos.add(produto);
+				}
 			}
 		}
 
