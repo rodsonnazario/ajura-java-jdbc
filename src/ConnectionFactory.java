@@ -13,7 +13,8 @@ public class ConnectionFactory {
 		ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource();
 		comboPooledDataSource.setJdbcUrl("jdbc:mariadb://localhost/loja_virtual?useTimezone=true&serverTimezone=UTC");
 		comboPooledDataSource.setUser("root");
-		comboPooledDataSource.setPassword("root");
+		comboPooledDataSource.setPassword("root");		
+		comboPooledDataSource.setMaxPoolSize(15);
 
 		this.dataSource = comboPooledDataSource;
 	}
