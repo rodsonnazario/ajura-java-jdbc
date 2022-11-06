@@ -25,6 +25,6 @@ public class Produto {
 
 	@Override
 	public String toString() {
-		return String.format("O produto criado foi: %d, %s, %s", this.id, this.nome, this.descricao);
+		return String.format("Produto %d, %s, %s", this.id, this.nome, this.descricao);
 	}
 }
