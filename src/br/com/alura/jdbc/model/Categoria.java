@@ -21,17 +21,17 @@ public class Categoria {
 	public String getNome() {
 		return nome;
 	}
-	
+
 	public List<Produto> getProdutos() {
 		return produtos;
 	}
-	
+
 	public void adicionarProduto(Produto produto) {
 		produtos.add(produto);
 	}
 
 	@Override
 	public String toString() {
-		return String.format("Categoria: %d, %s", this.id, this.nome);
+		return this.nome;
 	}
 }
